@@ -1,0 +1,9 @@
+# editor
+ aboutyoucode-workspace.code-workspace
+
+# nodeJS
+node_modules
+
+# cy
+cypress/videos
+cypress/screenshots

@@ -1,0 +1,17 @@
+{
+  "name": "aboutyou",
+  "version": "1.0.0",
+  "description": "Testing Storefront API",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivo Tijan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.4.1"
+  }
+}
