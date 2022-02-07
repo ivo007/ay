@@ -20,15 +20,9 @@ context('Pre-Chechout Conversion Funnels', () => {
     
   })
 
-  it('TEST', () => {
-    console.log("===> ", suiteData.productUrl)
-  })
-
-  describe.skip('Via direct link', () => {
+  describe('Via direct link', () => {
     before(() => {
-      const url = 'https://en.aboutyou.de/p/hoermanseder-x-about-you/between-season-jacket-cassia-7059943'
-  
-      cy.visit(url)
+      cy.visit(suiteData.productUrl)
         
       // accept cookies
       cy.get('#onetrust-accept-btn-handler').click()
@@ -41,11 +35,9 @@ context('Pre-Chechout Conversion Funnels', () => {
     it('Should see Flyin popup with checkout button', () => {})
   })
 
-  describe.skip('Via page search', () => {
+  describe('Via page search', () => {
     before(() => {
-      const url = 'https://www.aboutyou.de/'
-  
-      cy.visit(url)
+      cy.visit(suiteData.homeUrl)
         
       // accept cookies
       cy.get('#onetrust-accept-btn-handler').click()
@@ -64,11 +56,9 @@ context('Pre-Chechout Conversion Funnels', () => {
     it('Should see Flyin popup with checkout button', () => {})
   })
 
-  describe.skip('Via page category browsing', () => {
+  describe('Via page category browsing', () => {
     before(() => {
-      const url = 'https://www.aboutyou.de/'
-  
-      cy.visit(url)
+      cy.visit(suiteData.homeUrl)
         
       // accept cookies
       cy.get('#onetrust-accept-btn-handler').click()
