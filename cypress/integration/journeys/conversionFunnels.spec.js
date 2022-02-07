@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
-const suiteData = require('../../fixtures/conversionFunnels')
+import suiteData from '../../fixtures/conversionFunnels'
+
+import CookiesPage from '../../support/pageObjects/cookiesPage'
 
 context('Pre-Chechout Conversion Funnels', () => {
 
@@ -23,9 +25,9 @@ context('Pre-Chechout Conversion Funnels', () => {
   describe('Via direct link', () => {
     before(() => {
       cy.visit(suiteData.productUrl)
-        
-      // accept cookies
-      cy.get('#onetrust-accept-btn-handler').click()
+
+      const cookiePage = new CookiesPage()
+      cookiePage.confirm()
   
       // confirm country choice
       cy.get('[data-testid=countrySwitchCurrentCountry]').click()
@@ -39,8 +41,8 @@ context('Pre-Chechout Conversion Funnels', () => {
     before(() => {
       cy.visit(suiteData.homeUrl)
         
-      // accept cookies
-      cy.get('#onetrust-accept-btn-handler').click()
+      const cookiePage = new CookiesPage()
+      cookiePage.confirm()
   
       // confirm country choice
       cy.get('[data-testid=countrySwitchCurrentCountry]').click()
@@ -60,8 +62,8 @@ context('Pre-Chechout Conversion Funnels', () => {
     before(() => {
       cy.visit(suiteData.homeUrl)
         
-      // accept cookies
-      cy.get('#onetrust-accept-btn-handler').click()
+      const cookiePage = new CookiesPage()
+      cookiePage.confirm()
   
       // confirm country choice
       cy.get('[data-testid=countrySwitchCurrentCountry]').click()
