@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+const suiteData = require('../../fixtures/conversionFunnels')
+
 context('Pre-Chechout Conversion Funnels', () => {
 
   // FIXME: was not able to get around redirects so I went with www :/
@@ -18,7 +20,11 @@ context('Pre-Chechout Conversion Funnels', () => {
     
   })
 
-  describe('Via direct link', () => {
+  it('TEST', () => {
+    console.log("===> ", suiteData.productUrl)
+  })
+
+  describe.skip('Via direct link', () => {
     before(() => {
       const url = 'https://en.aboutyou.de/p/hoermanseder-x-about-you/between-season-jacket-cassia-7059943'
   
@@ -35,7 +41,7 @@ context('Pre-Chechout Conversion Funnels', () => {
     it('Should see Flyin popup with checkout button', () => {})
   })
 
-  describe.only('Via page search', () => {
+  describe.skip('Via page search', () => {
     before(() => {
       const url = 'https://www.aboutyou.de/'
   
@@ -58,7 +64,7 @@ context('Pre-Chechout Conversion Funnels', () => {
     it('Should see Flyin popup with checkout button', () => {})
   })
 
-  describe('Via page category browsing', () => {
+  describe.skip('Via page category browsing', () => {
     before(() => {
       const url = 'https://www.aboutyou.de/'
   
@@ -82,6 +88,4 @@ context('Pre-Chechout Conversion Funnels', () => {
     it('Should be able to select a size', () => {})
     it('Should see Flyin popup with checkout button', () => {})
   })
-  
-    
 })
